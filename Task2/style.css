@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #020202;
+    color: white;
+    overflow-x: hidden;
+}
+
+.background {
+    background-image:
+        linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.95) 75%, #020202),
+        url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1920&auto=format&fit=crop");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 50px 50px black;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    font-family: 'Gruppo', cursive;
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 20px rgba(255,255,255,0.7);
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.layer-1 {
+    background-image:
+        linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.8) 75%, #020202),
+        url("https://i.imgur.com/bwEm8WB.png");
+    background-size: cover;
+    z-index: 20;
+}
+
+.layer-2 {
+    background-image:
+        linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.9) 80%, #020202),
+        url("https://i.imgur.com/XxTPjmC.png");
+    background-size: cover;
+    z-index: 30;
+}
+
+.layer-3 {
+    background-image:
+        linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.9), #020202),
+        url("https://i.imgur.com/F4xnzjU.png");
+    background-size: cover;
+    z-index: 40;
+}
+
+.layer-4 {
+    background:
+        radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 10;
+}
+
+.layer-5 {
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4) 1px, transparent 2px),
+        radial-gradient(circle at 70% 60%, rgba(255,255,255,0.5) 1px, transparent 2px),
+        radial-gradient(circle at 40% 80%, rgba(255,255,255,0.4) 1px, transparent 2px);
+    background-size: 300px 300px;
+    z-index: 12;
+}
+
+.layer-6 {
+    background:
+        radial-gradient(circle at 10% 50%, rgba(0,191,255,0.15), transparent 25%),
+        radial-gradient(circle at 80% 20%, rgba(255,0,255,0.15), transparent 25%);
+    z-index: 14;
+}
+
+.layer-7 {
+    background:
+        linear-gradient(to bottom, transparent, rgba(0,0,0,0.4));
+    z-index: 15;
+}
+
+.planet {
+    position: absolute;
+    z-index: 50;
+    border-radius: 50%;
+}
+
+.planet-1 {
+    width: 220px;
+    top: 10%;
+    left: 8%;
+}
+
+.planet-2 {
+    width: 160px;
+    top: 20%;
+    right: 10%;
+}
+
+.stars {
+    position: absolute;
+    z-index: 55;
+    opacity: 0.8;
+}
+
+.stars-1 {
+    width: 180px;
+    top: 15%;
+    left: 20%;
+}
+
+.stars-2 {
+    width: 140px;
+    top: 40%;
+    right: 18%;
+}
+
+.meteor {
+    position: absolute;
+    z-index: 58;
+}
+
+.meteor-1 {
+    width: 160px;
+    top: 12%;
+    right: 12%;
+    transform: rotate(-20deg);
+}
+
+.meteor-2 {
+    width: 120px;
+    top: 28%;
+    left: 8%;
+    transform: rotate(15deg);
+}
+
+.content {
+    position: relative;
+    background-image:
+        linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.98)),
+        url("https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=1920&auto=format&fit=crop");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 150vh;
+    padding-bottom: 20rem;
+}
+
+.text {
+    padding: 8rem 12rem 12rem 40rem;
+    line-height: 1.9;
+    position: relative;
+    z-index: 100;
+}
+
+.text h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: 'Gruppo', cursive;
+    letter-spacing: 0.3rem;
+}
+
+.text p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.85);
+}
+
+.rock {
+    background-image: url("https://i.imgur.com/F4xnzjU.png");
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-position: left center;
+    transform: scaleX(-1);
+}
+
+.rocks {
+    position: absolute;
+    z-index: 200;
+}
+
+.rock-1 {
+    width: 100px;
+    top: 30%;
+    left: 5%;
+}
+
+.rock-2 {
+    width: 120px;
+    top: 45%;
+    left: 18%;
+}
+
+.rock-3 {
+    width: 80px;
+    top: 60%;
+    left: 12%;
+}
+
+.rock-4 {
+    width: 150px;
+    top: 75%;
+    left: 25%;
+}
+
+.rock-5 {
+    width: 100px;
+    top: 55%;
+    left: 30%;
+}
+
+.rock-6 {
+    width: 70px;
+    top: 35%;
+    left: 35%;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .text {
+        padding: 4rem 3rem 6rem 3rem;
+    }
+
+    .planet,
+    .stars,
+    .meteor,
+    .rocks,
+    .rock {
+        display: none;
+    }
+
+    .text h2 {
+        font-size: 2rem;
+    }
+}
