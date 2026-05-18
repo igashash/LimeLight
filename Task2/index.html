@@ -1,68 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beyond The Stars</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abyssal</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
-
 <body>
 
-<div class="container">
+  <div id="progress"></div>
+  <div id="depth">DEPTH: <span id="dval">0</span>m</div>
 
-    <div class="background">
-        <h1>Beyond The Stars</h1>
+  <div class="hero">
+    <div class="layer layer-1" id="l1"></div>
+    <div class="layer layer-2" id="l2"></div>
+    <div class="layer layer-3" id="l3"></div>
+    <h1>Abyssal</h1>
+  </div>
 
-        <div class="layer layer-1"></div>
-        <div class="layer layer-2"></div>
-        <div class="layer layer-3"></div>
-        <div class="layer layer-4"></div>
+  <div class="content">
+    <div class="orb orb-1" id="o1"></div>
+    <div class="orb orb-2" id="o2"></div>
+    <div class="orb orb-3" id="o3"></div>
+
+    <!-- Jellyfish -->
+    <div class="jelly" id="j1">
+      <svg width="80" height="110" viewBox="0 0 80 110">
+        <defs><radialGradient id="jg1" cx="50%" cy="40%"><stop offset="0%" stop-color="#b44fff" stop-opacity="0.9"/><stop offset="100%" stop-color="#5500aa" stop-opacity="0.1"/></radialGradient></defs>
+        <ellipse cx="40" cy="34" rx="34" ry="28" fill="url(#jg1)"/>
+        <line x1="20" y1="60" x2="16" y2="105" stroke="rgba(180,79,255,0.4)" stroke-width="1.2"/>
+        <line x1="32" y1="62" x2="30" y2="108" stroke="rgba(180,79,255,0.35)" stroke-width="1"/>
+        <line x1="40" y1="62" x2="40" y2="110" stroke="rgba(180,79,255,0.4)" stroke-width="1.2"/>
+        <line x1="48" y1="62" x2="50" y2="108" stroke="rgba(180,79,255,0.35)" stroke-width="1"/>
+        <line x1="60" y1="60" x2="64" y2="105" stroke="rgba(180,79,255,0.4)" stroke-width="1.2"/>
+      </svg>
     </div>
 
-    <div class="content">
-
-        <div class="text">
-
-            <h2>Explore The Universe</h2>
-
-            <p>
-                Humanity has always searched beyond the horizon, looking toward the stars for discovery and adventure.
-                Across endless galaxies and drifting planets, the universe continues to inspire imagination.
-            </p>
-
-            <p>
-                This parallax experience recreates the feeling of floating through deep space using layered animation,
-                scrolling effects, and immersive visuals that move at different speeds.
-            </p>
-
-            <p>
-                Massive planets drift slowly through the darkness while distant stars remain frozen in the background.
-                The astronaut moves gently across the screen creating the illusion of depth and movement.
-            </p>
-
-        </div>
-
-        <img class="rock-1 rocks" src="https://i.imgur.com/yIbmDYw.png" alt="rock">
-        <img class="rock-2 rocks" src="https://i.imgur.com/MZutMpv.png" alt="rock">
-        <img class="rock-3 rocks" src="https://i.imgur.com/AZumOFI.png" alt="rock">
-        <img class="rock-4 rocks" src="https://i.imgur.com/yIbmDYw.png" alt="rock">
-        <img class="rock-5 rocks" src="https://i.imgur.com/MZutMpv.png" alt="rock">
-        <img class="rock-6 rocks" src="https://i.imgur.com/AZumOFI.png" alt="rock">
-
-        <div class="rock"></div>
-
+    <div class="jelly" id="j2">
+      <svg width="60" height="85" viewBox="0 0 60 85">
+        <defs><radialGradient id="jg2" cx="50%" cy="40%"><stop offset="0%" stop-color="#00d4ff" stop-opacity="0.9"/><stop offset="100%" stop-color="#003366" stop-opacity="0.1"/></radialGradient></defs>
+        <ellipse cx="30" cy="26" rx="26" ry="22" fill="url(#jg2)"/>
+        <line x1="14" y1="46" x2="10" y2="82" stroke="rgba(0,212,255,0.4)" stroke-width="1"/>
+        <line x1="24" y1="48" x2="22" y2="84" stroke="rgba(0,212,255,0.35)" stroke-width="1"/>
+        <line x1="30" y1="48" x2="30" y2="85" stroke="rgba(0,212,255,0.4)" stroke-width="1"/>
+        <line x1="36" y1="48" x2="38" y2="84" stroke="rgba(0,212,255,0.35)" stroke-width="1"/>
+        <line x1="46" y1="46" x2="50" y2="82" stroke="rgba(0,212,255,0.4)" stroke-width="1"/>
+      </svg>
     </div>
 
-</div>
+    <!-- Fish schools -->
+    <div class="fish" id="f1">
+      <svg width="160" height="30" viewBox="0 0 160 30">
+        <g fill="rgba(0,212,255,0.7)">
+          <ellipse cx="18" cy="10" rx="12" ry="5"/><polygon points="6,10 0,5 0,15"/>
+          <ellipse cx="60" cy="20" rx="10" ry="4"/><polygon points="50,20 44,15 44,25"/>
+          <ellipse cx="100" cy="8"  rx="13" ry="5"/><polygon points="87,8 80,3 80,13"/>
+          <ellipse cx="142" cy="18" rx="11" ry="4.5"/><polygon points="131,18 124,13 124,23"/>
+        </g>
+      </svg>
+    </div>
 
-<script src="script.js"></script>
+    <div class="fish" id="f2">
+      <svg width="120" height="28" viewBox="0 0 120 28">
+        <g fill="rgba(0,255,180,0.65)">
+          <ellipse cx="16" cy="12" rx="11" ry="4.5"/><polygon points="5,12 0,7 0,17"/>
+          <ellipse cx="55" cy="20" rx="9"  ry="3.5"/><polygon points="46,20 40,15 40,25"/>
+          <ellipse cx="95" cy="9"  rx="12" ry="5"/>  <polygon points="83,9 76,4 76,14"/>
+        </g>
+      </svg>
+    </div>
 
+    <!-- Bubbles -->
+    <div class="bubble" style="left:15%;animation-duration:7s;width:10px;height:10px;"></div>
+    <div class="bubble" style="left:35%;animation-duration:9s;animation-delay:2s;width:7px;height:7px;"></div>
+    <div class="bubble" style="left:60%;animation-duration:6s;animation-delay:1s;width:14px;height:14px;"></div>
+    <div class="bubble" style="left:80%;animation-duration:11s;animation-delay:3s;width:6px;height:6px;"></div>
+    <div class="bubble" style="left:50%;animation-duration:8s;animation-delay:4s;width:9px;height:9px;"></div>
+
+    <!-- Text sections -->
+    <div class="text" id="t1">
+      <div class="label">— 200 metres below</div>
+      <h2>The Twilight Zone</h2>
+      <p>Sunlight barely grazes these waters. Creatures drift through eternal blue dusk, their bodies lit by cold bioluminescent fire.</p>
+    </div>
+
+    <div class="text right" id="t2">
+      <div class="label">— 1000 metres below</div>
+      <h2>Midnight Waters</h2>
+      <p>No sunlight reaches here. The pressure is immense, the cold absolute — yet life endures, alien and breathtaking.</p>
+    </div>
+
+    <div class="text" id="t3">
+      <div class="label">— 4000 metres below</div>
+      <h2>The Abyss</h2>
+      <p>Silence is total. We know more about the moon's surface than the floor beneath our own oceans. Some mysteries endure.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
