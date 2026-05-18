@@ -1,32 +1,29 @@
-$(window).bind('scroll', function () {
-    parallaxScroll();
+$(window).on('scroll', function () {
+    var s = $(window).scrollTop();
+
+    // 3 parallax layers
+    $('#l1').css('top', -(s * 0.15) + 'px');
+    $('#l2').css('top', -(s * 0.35) + 'px');
+    $('#l3').css('top', -(s * 0.55) + 'px');
+
+    // Orbs at different speeds
+    $('#o1').css('top', (8  - s * 0.008) + '%');
+    $('#o2').css('top', (40 - s * 0.012) + '%');
+    $('#o3').css('top', (70 - s * 0.006) + '%');
+
+    // Jellyfish drift with scroll
+    $('#j1').css('top', (10 - s * 0.010) + '%');
+    $('#j2').css('top', (45 - s * 0.007) + '%');
+
+    // Text panels
+    $('#t1').css('transform', 'translateY(' + -(s * 0.04) + 'px)');
+    $('#t2').css('transform', 'translateY(' + -(s * 0.03) + 'px)');
+    $('#t3').css('transform', 'translateY(' + -(s * 0.02) + 'px)');
+
+    // Progress bar
+    var pct = (s / ($(document).height() - $(window).height())) * 100;
+    $('#progress').css('width', pct + '%');
+
+    // Depth counter
+    $('#dval').text(Math.round(pct * 40));
 });
-
-function parallaxScroll() {
-
-    var scrolled = $(window).scrollTop();
-
-    $('.layer-1').css('top', (0 - (scrolled * 0.25)) + 'px');
-    $('.layer-2').css('top', (0 - (scrolled * 0.45)) + 'px');
-    $('.layer-3').css('top', (0 - (scrolled * 0.7)) + 'px');
-
-    $('.layer-5').css('top', (0 - (scrolled * 0.15)) + 'px');
-    $('.layer-6').css('top', (0 - (scrolled * 0.35)) + 'px');
-    $('.layer-7').css('top', (0 - (scrolled * 0.55)) + 'px');
-
-    $('.planet-1').css('top', (100 - (scrolled * 0.15)) + 'px');
-    $('.planet-2').css('top', (180 - (scrolled * 0.25)) + 'px');
-
-    $('.stars-1').css('top', (150 - (scrolled * 0.2)) + 'px');
-    $('.stars-2').css('top', (300 - (scrolled * 0.25)) + 'px');
-
-    $('.meteor-1').css('top', (120 - (scrolled * 0.6)) + 'px');
-    $('.meteor-2').css('top', (250 - (scrolled * 0.5)) + 'px');
-
-    $('.rock-1').css('top', (300 - (scrolled * 0.8)) + 'px');
-    $('.rock-2').css('top', (500 - (scrolled * 0.6)) + 'px');
-    $('.rock-3').css('top', (700 - (scrolled * 0.5)) + 'px');
-    $('.rock-4').css('top', (900 - (scrolled * 0.7)) + 'px');
-    $('.rock-5').css('top', (650 - (scrolled * 0.4)) + 'px');
-    $('.rock-6').css('top', (400 - (scrolled * 0.3)) + 'px');
-}
